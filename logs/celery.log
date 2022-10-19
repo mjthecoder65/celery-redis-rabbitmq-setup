@@ -1,0 +1,288 @@
+[2022-09-22 03:47:12,058: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 03:47:12,074: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 03:47:13,096: INFO/MainProcess] mingle: all alone
+[2022-09-22 03:47:13,120: INFO/MainProcess] celery@b0711ab79f7a ready.
+[2022-09-22 03:47:31,322: INFO/MainProcess] Task create_task[90818b9c-d15e-4c22-84b6-010f747b4fe0] received
+[2022-09-22 03:47:46,381: INFO/ForkPoolWorker-3] Task create_task[90818b9c-d15e-4c22-84b6-010f747b4fe0] succeeded in 15.054716839993489s: True
+[2022-09-22 03:55:14,702: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 03:55:14,713: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 03:55:15,738: INFO/MainProcess] mingle: all alone
+[2022-09-22 03:55:15,774: INFO/MainProcess] celery@d8d0d17350a0 ready.
+[2022-09-22 03:57:04,317: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 03:57:09,328: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 03:57:10,339: INFO/MainProcess] mingle: all alone
+[2022-09-22 03:57:10,362: INFO/MainProcess] celery@64c98912ef81 ready.
+[2022-09-22 03:59:11,845: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 03:59:11,852: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 03:59:12,864: INFO/MainProcess] mingle: all alone
+[2022-09-22 03:59:12,897: INFO/MainProcess] celery@0fe855d1ce04 ready.
+[2022-09-22 03:59:16,879: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-22 04:00:20,032: INFO/MainProcess] Task create_task[fdf4147f-bc7a-40d1-b562-eb71aaf9244c] received
+[2022-09-22 04:00:30,070: INFO/ForkPoolWorker-3] Task create_task[fdf4147f-bc7a-40d1-b562-eb71aaf9244c] succeeded in 10.0202372539934s: True
+[2022-09-22 04:01:01,423: INFO/MainProcess] Task create_task[44e5e43b-1bd7-4b29-af0f-4f66a7c337a5] received
+[2022-09-22 04:01:21,457: INFO/ForkPoolWorker-3] Task create_task[44e5e43b-1bd7-4b29-af0f-4f66a7c337a5] succeeded in 20.019599259001552s: True
+[2022-09-22 04:11:41,593: ERROR/MainProcess] Received unregistered task of type 'fetch_posts'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'fetch_posts', 'id': '95573212-0f84-4ddb-ad88-37c97c52c67f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '95573212-0f84-4ddb-ad88-37c97c52c67f', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen44@4693001d1da2', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'fetch_posts'
+[2022-09-22 04:14:19,659: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 04:14:19,663: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 04:14:20,678: INFO/MainProcess] mingle: all alone
+[2022-09-22 04:14:20,710: INFO/MainProcess] celery@9419b006dda9 ready.
+[2022-09-22 04:14:24,382: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-22 04:24:00,127: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 04:24:00,132: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 04:24:01,147: INFO/MainProcess] mingle: all alone
+[2022-09-22 04:24:01,183: INFO/MainProcess] celery@0a16be234c22 ready.
+[2022-09-22 04:24:04,818: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-22 04:24:29,282: INFO/MainProcess] Task fetch_posts[f0511c73-884b-4683-bc88-5d12acb66a2a] received
+[2022-09-22 04:24:39,696: ERROR/ForkPoolWorker-3] Task fetch_posts[f0511c73-884b-4683-bc88-5d12acb66a2a] raised unexpected: EncodeError(TypeError('Object of type Response is not JSON serializable'))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 39, in _reraise_errors
+    yield
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 210, in dumps
+    payload = encoder(data)
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/local/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/local/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Response is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/app/trace.py", line 518, in trace_task
+    task.backend.mark_as_done(
+  File "/usr/local/lib/python3.9/site-packages/celery/backends/base.py", line 162, in mark_as_done
+    self.store_result(task_id, result, state, request=request)
+  File "/usr/local/lib/python3.9/site-packages/celery/backends/base.py", line 528, in store_result
+    self._store_result(task_id, result, state, traceback,
+  File "/usr/local/lib/python3.9/site-packages/celery/backends/base.py", line 962, in _store_result
+    self._set_with_state(self.get_key_for_task(task_id), self.encode(meta), state)
+  File "/usr/local/lib/python3.9/site-packages/celery/backends/base.py", line 418, in encode
+    _, _, payload = self._encode(data)
+  File "/usr/local/lib/python3.9/site-packages/celery/backends/base.py", line 422, in _encode
+    return dumps(data, serializer=self.serializer)
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 210, in dumps
+    payload = encoder(data)
+  File "/usr/local/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 43, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/usr/local/lib/python3.9/site-packages/kombu/exceptions.py", line 21, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 39, in _reraise_errors
+    yield
+  File "/usr/local/lib/python3.9/site-packages/kombu/serialization.py", line 210, in dumps
+    payload = encoder(data)
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/local/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/local/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type Response is not JSON serializable
+[2022-09-22 04:25:32,977: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-22 04:25:32,981: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-22 04:25:34,000: INFO/MainProcess] mingle: all alone
+[2022-09-22 04:25:34,034: INFO/MainProcess] celery@baefffedc876 ready.
+[2022-09-22 04:25:38,205: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-22 04:25:47,037: INFO/MainProcess] Task create_task[d715878d-8e78-4b92-9759-b0b71f18a78c] received
+[2022-09-22 04:25:51,429: INFO/MainProcess] Task fetch_posts[d2a7b91f-042e-480d-b92f-ca1ee7bbb0e6] received
+[2022-09-22 04:26:01,803: INFO/ForkPoolWorker-5] Task fetch_posts[d2a7b91f-042e-480d-b92f-ca1ee7bbb0e6] succeeded in 10.367627005005488s: [{'userId': 1, 'id': 1, 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 'body': 'quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto'}, {'userId': 1, 'id': 2, 'title': 'qui est esse', 'body': 'est rerum tempore vitae
+sequi sint nihil reprehenderit dolor beatae ea dolores neque
+fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis
+qui aperiam non debitis possimus qui neque nisi nulla'}, {'userId': 1, 'id': 3, 'title': 'ea molestias quasi exercitationem repellat qui ipsa sit aut', 'body': 'et iusto sed quo iure
+voluptatem occaecati omnis eligendi aut ad
+voluptatem doloribus vel accusantium quis pariatur
+molestiae porro eius odio et labore et velit aut'}, {'userId': 1, 'id': 4, 'title': 'eum et est occaecati', 'body': 'ullam et saepe reiciendis voluptatem adipisci
+sit amet autem assumenda provident rerum culpa
+quis hic commodi nesciunt rem tenetur...'}, {, ...}]
+[2022-09-22 04:26:17,083: INFO/ForkPoolWorker-3] Task create_task[d715878d-8e78-4b92-9759-b0b71f18a78c] succeeded in 30.04538609700103s: True
+[2022-09-22 06:40:57,482: INFO/MainProcess] Task create_task[07c33778-b2b1-42b5-b03b-5c87e17ff284] received
+[2022-09-22 06:41:07,058: INFO/MainProcess] Task create_task[ff35b4ef-a324-4224-a312-066aa477df7f] received
+[2022-09-22 06:41:17,076: INFO/ForkPoolWorker-5] Task create_task[ff35b4ef-a324-4224-a312-066aa477df7f] succeeded in 10.009015670992085s: True
+[2022-09-22 06:41:27,527: INFO/ForkPoolWorker-3] Task create_task[07c33778-b2b1-42b5-b03b-5c87e17ff284] succeeded in 30.030925847007893s: True
+[2022-09-22 08:59:57,755: INFO/MainProcess] Task create_task[cf8768d0-a42f-48f8-9856-e8a250d84a8a] received
+[2022-09-22 09:00:07,779: INFO/ForkPoolWorker-3] Task create_task[cf8768d0-a42f-48f8-9856-e8a250d84a8a] succeeded in 10.011452463004389s: True
+[2022-10-19 05:03:15,136: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-10-19 05:03:15,143: INFO/MainProcess] mingle: searching for neighbors
+[2022-10-19 05:03:16,160: INFO/MainProcess] mingle: all alone
+[2022-10-19 05:03:16,177: INFO/MainProcess] celery@2f341a79fec8 ready.
+[2022-10-19 05:05:17,250: INFO/MainProcess] Task create_task[6726aab9-63eb-4272-a09f-1aaccbe01fd3] received
+[2022-10-19 05:05:37,266: INFO/ForkPoolWorker-3] Task create_task[6726aab9-63eb-4272-a09f-1aaccbe01fd3] succeeded in 20.01058217600803s: True
+[2022-10-19 05:08:06,187: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-10-19 05:08:06,190: INFO/MainProcess] mingle: searching for neighbors
+[2022-10-19 05:08:07,198: INFO/MainProcess] mingle: all alone
+[2022-10-19 05:08:07,228: INFO/MainProcess] celery@ae52c9e26328 ready.
+[2022-10-19 05:08:11,058: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-10-19 05:08:29,348: INFO/MainProcess] Task create_task[d7754566-750f-4608-9540-e4714ae50574] received
+[2022-10-19 05:08:39,364: INFO/ForkPoolWorker-3] Task create_task[d7754566-750f-4608-9540-e4714ae50574] succeeded in 10.01106375400559s: True
+[2022-10-19 05:10:50,205: INFO/MainProcess] Task create_task[15f7dcca-9fcb-4392-999b-27dd2032a846] received
+[2022-10-19 05:11:20,237: INFO/ForkPoolWorker-3] Task create_task[15f7dcca-9fcb-4392-999b-27dd2032a846] succeeded in 30.022440888016718s: True
+[2022-10-19 05:18:38,146: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+  File "/usr/local/lib/python3.10/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/usr/local/lib/python3.10/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 1326, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 562, in on_readable
+    chan.handlers[type]()
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 906, in _receive
+    ret.append(self._receive_one(c))
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 916, in _receive_one
+    response = c.parse_response()
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1500, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1482, in _execute
+    return conn.retry.call_with_retry(
+  File "/usr/local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1484, in <lambda>
+    lambda error: self._disconnect_raise_connect(conn, error),
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1471, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1483, in <lambda>
+    lambda: command(*args, **kwargs),
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 824, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 318, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 249, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 195, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+[2022-10-19 05:18:38,154: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:367: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+[2022-10-19 05:18:38,159: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error 111 connecting to redis:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-10-19 05:18:42,216: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-10-19 05:18:42,221: INFO/MainProcess] mingle: searching for neighbors
+[2022-10-19 05:18:43,234: INFO/MainProcess] mingle: all alone
+[2022-10-19 05:18:43,244: INFO/MainProcess] celery@5f87b6c65304 ready.
+[2022-10-19 05:18:47,506: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-10-19 05:19:58,077: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-10-19 05:19:58,081: INFO/MainProcess] mingle: searching for neighbors
+[2022-10-19 05:19:59,089: INFO/MainProcess] mingle: all alone
+[2022-10-19 05:19:59,116: INFO/MainProcess] celery@f588a0ca4a5d ready.
+[2022-10-19 05:20:03,374: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-10-19 05:20:37,998: INFO/MainProcess] Task create_task[7aad7166-4581-4277-a1ca-9ed19d8188b2] received
+[2022-10-19 05:20:48,019: INFO/ForkPoolWorker-3] Task create_task[7aad7166-4581-4277-a1ca-9ed19d8188b2] succeeded in 10.015872170974035s: True
+[2022-10-19 05:21:56,158: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+  File "/usr/local/lib/python3.10/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/usr/local/lib/python3.10/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 1326, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 562, in on_readable
+    chan.handlers[type]()
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 906, in _receive
+    ret.append(self._receive_one(c))
+  File "/usr/local/lib/python3.10/site-packages/kombu/transport/redis.py", line 916, in _receive_one
+    response = c.parse_response()
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1500, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1482, in _execute
+    return conn.retry.call_with_retry(
+  File "/usr/local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1484, in <lambda>
+    lambda error: self._disconnect_raise_connect(conn, error),
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1471, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1483, in <lambda>
+    lambda: command(*args, **kwargs),
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 824, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 318, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 249, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 195, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+[2022-10-19 05:21:56,167: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:367: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+[2022-10-19 05:21:56,173: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error 111 connecting to redis:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-10-19 05:22:11,434: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-10-19 05:22:11,438: INFO/MainProcess] mingle: searching for neighbors
+[2022-10-19 05:22:12,448: INFO/MainProcess] mingle: all alone
+[2022-10-19 05:22:12,466: INFO/MainProcess] celery@f0b0bb2352f5 ready.
+[2022-10-19 05:22:16,403: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-10-19 05:22:23,620: INFO/MainProcess] Task create_task[0221caf4-8353-41d8-810b-625c7e82f126] received
+[2022-10-19 05:22:33,633: INFO/ForkPoolWorker-3] Task create_task[0221caf4-8353-41d8-810b-625c7e82f126] succeeded in 10.009057504008524s: True
+[2022-10-19 05:26:59,007: INFO/MainProcess] Task create_task[751fb731-c3c2-4e57-84a3-de37864649dd] received
+[2022-10-19 05:27:09,018: INFO/ForkPoolWorker-3] Task create_task[751fb731-c3c2-4e57-84a3-de37864649dd] succeeded in 10.004975838004611s: True
