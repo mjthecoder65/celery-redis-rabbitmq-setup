@@ -16,7 +16,7 @@ to a worker.
 # Monitoring
 - Flower is the real-time web application monitoring and admistration tool for Celery.
 
-# Use CASES of Celery + FastAPI
+# Use CASES of Celery
 - Sending out emails as Background tasks in an app
 - Processing the uploaded images in the background
 - Offline training of ML models
